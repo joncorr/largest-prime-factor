@@ -12,10 +12,11 @@
     :when (zero? (mod number i))] i))))))
 
 (defn prime? [number]
-  (let [factors (get-factors number)]
-  (if (= (count factors) 2)
-      true
-      false)))
+   (if (= number 2)
+    true
+    (= nil (first
+     (for [i (range 2 number)
+     :when (zero? (mod number i))] i)))))
 
  (defn get-prime-factors [number]
     (filter prime? (get-factors number)))
