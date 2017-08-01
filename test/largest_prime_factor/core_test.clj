@@ -6,6 +6,10 @@
   (testing "2 is a prime number"
       (is (= (prime? 2) true))))
 
+(deftest prime?-1
+   (testing "1 is not a prime number"
+       (is (false? (prime? 1)))))
+
 (deftest prime?-4
   (testing "4 is not a prime number"
       (is (= (prime? 4) false))))
